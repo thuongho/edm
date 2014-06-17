@@ -1,6 +1,7 @@
 @import "bootstrap";
 
 $grayMediumLight: #eaeaea;
+$djm: #00FFFF;
 
 body {
   background-color: #F5F5F1;
@@ -52,15 +53,26 @@ body {
 }
 
 .jumbotron {
-  background-image: url('https://dl.dropboxusercontent.com/s/n8w9l6s88551dfq/jumbotron.jpg');
+  background-image: url('/images/drop.jpg');
+  padding-bottom: 80px;
+  opacity: 0.8;
   h1, h2 {
     font-family: guardian-egyptt, georgia, serif;
+  }
+  h1 {
+    text-shadow: 2px 2px 2px white;
+  }
+  h2 {
+    color: white;
+    text-shadow: 2px 2px 1px black,
+    3px 3px 3px $djm;
+    margin-left: 12%;
   }
 }
 
 #logo {
   font-family: 'Lobster', cursive;
-  color: #00FFFF;
+  color: $djm;
   text-shadow: 1px 1px 1px black;
 }
 
@@ -75,6 +87,8 @@ footer {
   color: $gray-light;
 }
 
-.lefty > li {
-  text-align: left;
+.lefty {
+  li {
+    text-align: left;
+  }
 }

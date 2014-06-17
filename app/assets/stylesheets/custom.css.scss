@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+$grayMediumLight: #eaeaea;
+
 body {
   background-color: #F5F5F1;
   color: #333333;
@@ -66,4 +68,13 @@ body {
   font-family: 'Lobster', cursive;  
 }
 
-footer { margin-top: 50px; }
+footer { 
+  margin-top: 45px; 
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $gray-light;
+}
+
+.lefty > li {
+  text-align: left;
+}

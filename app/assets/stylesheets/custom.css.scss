@@ -2,6 +2,7 @@
 
 $grayMediumLight: #eaeaea;
 $djm: #00FFFF;
+$j-blue: #0099FF;
 
 body {
   background-color: #F5F5F1;
@@ -78,6 +79,15 @@ body {
 
 .djm-brand {
   font-family: 'Lobster', cursive;  
+}
+
+.j {
+  color: $j-blue;
+}
+
+.cloth {
+  color: #9900FF;
+  text-shadow: 1px 1px 1px $djm;
 }
 
 footer { 

@@ -1,10 +1,17 @@
 <footer class="footer">
-  <div class="container">
-    <p>
-      <span class="djm-brand">Don't judge Me </span>Clothing &copy; 2014
-
-      <span class="pull-right"><i><b>Disclaimer:</b> this is not a real site, so please do not attempt to purchase anything from here.</i></span>
-    </p>
-
+  <div class="contact">
+  <span class="djm-brand">Don't judge Me </span>Clothing &copy; 2014
+  
+  <div class="nav pull-right">
+  <table id="about">
+  <tr>
+    <td><%= link_to "About", pages_about_path %></td>
+    <td><%= link_to "Contact", pages_contact_path %></td>
+  </tr>
+  </table>
+  </div>
+  </div>
+  <div class="center disclaimer">
+    <i><b>Disclaimer:</b> this is not a real site, so please do not attempt to purchase anything from here.</i>
   </div>
 </footer>

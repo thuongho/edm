@@ -86,8 +86,9 @@ body {
 }
 
 .cloth {
-  color: #9900FF;
-  text-shadow: 1px 1px 1px $djm;
+  // color: #9999FF;
+  color: $j-blue;
+  text-shadow: 1px 1px 1px black;
 }
 
 footer { 

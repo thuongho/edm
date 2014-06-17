@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :listings do
-    resources :orders
+    resources :orders, only: [:new, :create]
   end
 
   get 'pages/about'
@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   root 'listings#index'
 
   match '/seller', to: 'listings#seller', via: 'get'
+  match '/sales', to: 'order#sales', via: 'get'
+  match '/purchases', to: 'order#purchases', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

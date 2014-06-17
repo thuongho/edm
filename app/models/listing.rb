@@ -1,5 +1,9 @@
 class Listing < ActiveRecord::Base
 
+  belongs_to :user
+
+  scope :recent, lambda { order("created_at DESC") }
+
   if Rails.env.development?
     has_attached_file :image, :styles => { :medium => "200x>", :thumb => "100x100>" }, 
                     :default_url => "/images/no_pic.jpg"
@@ -15,5 +19,5 @@ class Listing < ActiveRecord::Base
   validates :price, numericality: { greater_than: 0 }
   validates :image, presence: true
 
-  belongs_to :user
+  
 end

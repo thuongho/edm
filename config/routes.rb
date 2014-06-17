@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root 'listings#index'
 
+  match '/seller', to: 'listings#seller', via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

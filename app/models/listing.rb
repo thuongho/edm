@@ -2,6 +2,7 @@ class Listing < ActiveRecord::Base
 
   belongs_to :user
   has_many :orders, dependent: :destroy
+  has_many :line_items
 
   scope :recent, lambda { order("created_at DESC") }
 

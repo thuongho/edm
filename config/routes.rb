@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
 
   
-
-  resources :carts
   devise_for :users
   resources :listings do
     resources :orders, only: [:new, :create]
@@ -11,12 +9,16 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
+  # get 'listings/add_to_cart'
 
   root 'listings#index'
 
   match '/seller', to: 'listings#seller', via: 'get'
   match '/sales', to: 'orders#sales', via: 'get'
   match '/purchases', to: 'orders#purchases', via: 'get'
+  match '/show_cart', to: 'listings#show_cart', via: 'get'
+  match '/add_to_cart', to: 'listings#add_to_cart', via: 'get'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

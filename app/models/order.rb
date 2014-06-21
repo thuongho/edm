@@ -3,6 +3,7 @@ class Order < ActiveRecord::Base
   belongs_to :listing
   belongs_to :buyer, class_name: "User"
   belongs_to :seller, class_name: "User"
+  has_many :line_items
 
   scope :recent, lambda { order("created_at DESC") }
 

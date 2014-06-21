@@ -2,6 +2,17 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
+  before_action :find_or_create_cart
+
+
+  def add_to_cart
+    listing = Listing.find(params[:id])
+    @cart.add_listing(listing)
+    redirect_to show_cart_path
+  end
+
+  def show_cart
+  end
 
   def seller
     @listings = Listing.where(user: current_user).recent
@@ -83,5 +94,15 @@ class ListingsController < ApplicationController
       if current_user != @listing.user
         redirect_to root_url, alert: "Sorry this listing belongs to someone else."
       end
+    end
+
+    # find a cart or if it doesn't exist, create one
+    def find_or_create_cart
+      @cart = session[:cart] ||= Cart.new
+    end
+
+    def add_listing(listing)
+      @items << Item.new_based_on(listing)
+      @total_price += listing.price
     end
 end

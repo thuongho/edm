@@ -10,7 +10,8 @@
     <p><%= @listing.description %></p>
     <br>
     <div class="center">
-      <%= link_to "Add To Cart", add_to_cart_path(id: @listing) %>
+      <!-- %= link_to "Add To Cart", action: "add_to_cart", id: params[:id] %> -->
+      <%= link_to "Add To Cart", controller: "cart", action: "add", id: params[:id] %>
       <%= link_to "Buy It Now", new_listing_order_path(@listing), class: 'btn btn-primary' %>
     </div>
   </div>

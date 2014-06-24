@@ -1,6 +1,7 @@
 class LineItem < ActiveRecord::Base
   belongs_to :listing
-  belongs_to :order
+  belongs_to :cart
+  # belongs_to :order
 
   def self.new_based_on(listing)
     line_item = self.new

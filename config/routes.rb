@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'pages/about'
 
   get 'pages/contact'
-  # get 'listings/add_to_cart'
+  get 'listings/add_to_cart'
 
   root 'listings#index'
 
@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   match '/sales', to: 'orders#sales', via: 'get'
   match '/purchases', to: 'orders#purchases', via: 'get'
   match '/show_cart', to: 'listings#show_cart', via: 'get'
-  match '/add_to_cart', to: 'listings#add_to_cart', via: 'get'
+  # match '/add_to_cart', to: 'listings#add_to_cart', via: 'post'
+  match '/add', to: 'cart#add', via: 'get'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -2,13 +2,29 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
-  before_action :find_or_create_cart
+  # before_action :find_or_create_cart
+  before_action :initialize_cart, only: [:add_to_cart, :show_cart]
 
+
+  # def add_to_cart
+  #   listing = Listing.find(params[:id])
+  #   @cart.add_listing(listing)
+  #   redirect_to show_cart_path
+  # end
+
+  # def show_cart
+  # end
 
   def add_to_cart
-    listing = Listing.find(params[:id])
-    @cart.add_listing(listing)
-    redirect_to show_cart_path
+
+    if request.post?
+      @item = @cart.add(params[:id])
+      flash[:cart_notice] = "Added <em>#{@item.listing.name}"
+      # redirect_to show_cart_path
+      render show_cart
+    else
+      render show
+    end
   end
 
   def show_cart
@@ -97,12 +113,9 @@ class ListingsController < ApplicationController
     end
 
     # find a cart or if it doesn't exist, create one
-    def find_or_create_cart
-      @cart = session[:cart] ||= Cart.new
-    end
+    # def find_or_create_cart
+    #   @cart = session[:cart] ||= Cart.new
+    # end
 
-    def add_listing(listing)
-      @items << Item.new_based_on(listing)
-      @total_price += listing.price
-    end
+
 end

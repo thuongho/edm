@@ -8,6 +8,10 @@ class User < ActiveRecord::Base
 
   has_many :listings, dependent: :destroy
   has_many :sales, class_name: "Order", foreign_key: "seller_id"
+<<<<<<< HEAD
   has_many :purchases, class_name: "Order", foreign_key: "buyer_id"  
   has_one :cart, dependent: :destroy     
+=======
+  has_many :purchases, class_name: "Order", foreign_key: "buyer_id"       
+>>>>>>> 11b131bbe530968891bc462422722812efa83dd3
 end

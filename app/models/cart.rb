@@ -3,6 +3,8 @@ class Cart < ActiveRecord::Base
   has_many :line_items
   has_many :listings, through: :line_items
 
+  scope :recent, lambda { order("created_at DESC")}
+
   # attr_reader :items
   # attr_reader :total_price
 
@@ -19,16 +21,16 @@ class Cart < ActiveRecord::Base
   #   @total_price += listing.price
   # end
 
-  def total
-    line_items.inject(0) {|sum, n| n.price * n.quantity + sum}
-  end
+  # def total
+  #   line_items.inject(0) {|sum, n| n.price * n.quantity + sum}
+  # end
 
   def add_listing(listing_id)
-    items = line_items.find_all_by_listing_id(listing_id)
+    items = line_items.where(listing_id: listing_id)
     listing = Listing.find(listing_id)
 
     if items.size < 1
-      cart_item = line_items.create(listing_id: :listing_id,
+      cart_item = line_items.create(listing_id: listing_id,
                                     quantity: 1,
                                     price: listing.price)
     else

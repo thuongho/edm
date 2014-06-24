@@ -1,27 +1,31 @@
-<h1>Listing carts</h1>
+<div class="center">
+  <h2>Your Cart</h2>
+</div>
 
-<table>
-  <thead>
+<table class="table table-striped table-bordered">
+  <tr>
+    <th class="center">Image</th>
+    <th class="center">Item</th>
+    <th class="center">Price</th>
+    <th class="center">Quantity</th>
+    <th class="center">Total</th>
+  </tr>
+
+  <% @cart_items.each do |item| %>
     <tr>
-      <th>User</th>
-      <th>Item</th>
-      <th colspan="3"></th>
+      <td class="center"><%= image_tag item.listing.image.url(:thumb) %></td>
+      <td class="center"><%= item.listing.name %></td>
+      <td class="center"><%= number_to_currency(item.listing.price) %></td>
+      <td class="center"><%= item.quantity %></td>
+      <td class="center"><%= number_to_currency(item.quantity * item.price) %></td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @carts.each do |cart| %>
-      <tr>
-        <td><%= cart.user_id %></td>
-        <td><%= cart.item_id %></td>
-        <td><%= link_to 'Show', cart %></td>
-        <td><%= link_to 'Edit', edit_cart_path(cart) %></td>
-        <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% end %>
+  <hr>
+    <tr>
+      <td colspan="4" class="righty"></td>
+      <td colspan="1" class="center">Total here</td>
+    </tr>
 </table>
 
-<br>
+<%= current_user.id %>
 
-<%= link_to 'New Cart', new_cart_path %>

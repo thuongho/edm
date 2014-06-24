@@ -1,9 +1,8 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:seller, :show, :new, :create, :edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
   # before_action :find_or_create_cart
-  before_action :initialize_cart, only: [:add_to_cart, :show_cart]
 
 
   # def add_to_cart
@@ -15,20 +14,20 @@ class ListingsController < ApplicationController
   # def show_cart
   # end
 
-  def add_to_cart
+  # def add_to_cart
 
-    if request.post?
-      @item = @cart.add(params[:id])
-      flash[:cart_notice] = "Added <em>#{@item.listing.name}"
-      # redirect_to show_cart_path
-      render show_cart
-    else
-      render show
-    end
-  end
+  #   if request.post?
+  #     @item = @cart.add(params[:id])
+  #     flash[:cart_notice] = "Added <em>#{@item.listing.name}"
+  #     # redirect_to show_cart_path
+  #     # render show_cart
+  #   else
+  #     render show
+  #   end
+  # end
 
-  def show_cart
-  end
+  # def show_cart
+  # end
 
   def seller
     @listings = Listing.where(user: current_user).recent

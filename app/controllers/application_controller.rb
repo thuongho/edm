@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   # include ListingsHelper
 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :authenticate_user!
 
   protected
 
@@ -15,12 +16,13 @@ class ApplicationController < ActionController::Base
 
   private
 
-    def initialize_cart
-      if session[:cart_id]
-        @cart = Cart.find(session[:cart_id])
-      else
-        @cart = Cart.create
-        session[:cart_id] = @cart.id
-      end
-    end
+    # def initialize_cart
+    #   if session[:cart_id]
+    #     @cart = Cart.find(session[:cart_id])
+    #   else
+    #     @cart = Cart.create
+    #     @cart.user_id = current_user.id
+    #     session[:cart_id] = @cart.id
+    #   end
+    # end
 end

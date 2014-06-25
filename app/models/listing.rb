@@ -2,11 +2,8 @@ class Listing < ActiveRecord::Base
 
   belongs_to :user
   has_many :orders, dependent: :destroy
-<<<<<<< HEAD
   has_many :line_items
   has_many :carts, through: :line_items
-=======
->>>>>>> 11b131bbe530968891bc462422722812efa83dd3
 
   scope :recent, lambda { order("created_at DESC") }
 

@@ -1,9 +1,8 @@
 class ListingsController < ApplicationController
   before_action :set_listing, only: [:show, :edit, :update, :destroy]
-<<<<<<< HEAD
-  before_action :authenticate_user!, only: [:seller, :show, :new, :create, :edit, :update, :destroy]
-  before_action :check_user, only: [:edit, :update, :destroy]
   # before_action :find_or_create_cart
+  before_action :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
+  before_action :check_user, only: [:edit, :update, :destroy]
 
 
   # def add_to_cart
@@ -15,24 +14,6 @@ class ListingsController < ApplicationController
   # def show_cart
   # end
 
-  # def add_to_cart
-
-  #   if request.post?
-  #     @item = @cart.add(params[:id])
-  #     flash[:cart_notice] = "Added <em>#{@item.listing.name}"
-  #     # redirect_to show_cart_path
-  #     # render show_cart
-  #   else
-  #     render show
-  #   end
-  # end
-
-  # def show_cart
-  # end
-=======
-  before_action :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
-  before_action :check_user, only: [:edit, :update, :destroy]
->>>>>>> 11b131bbe530968891bc462422722812efa83dd3
 
   def seller
     @listings = Listing.where(user: current_user).recent
@@ -115,14 +96,9 @@ class ListingsController < ApplicationController
         redirect_to root_url, alert: "Sorry this listing belongs to someone else."
       end
     end
-<<<<<<< HEAD
 
     # find a cart or if it doesn't exist, create one
     # def find_or_create_cart
     #   @cart = session[:cart] ||= Cart.new
     # end
-
-
-=======
->>>>>>> 11b131bbe530968891bc462422722812efa83dd3
 end

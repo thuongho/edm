@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
+
 ActiveRecord::Schema.define(version: 20140621033451) do
 
   create_table "carts", force: true do |t|
@@ -28,9 +28,6 @@ ActiveRecord::Schema.define(version: 20140621033451) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-=======
-ActiveRecord::Schema.define(version: 20140617022024) do
->>>>>>> 11b131bbe530968891bc462422722812efa83dd3
 
   create_table "listings", force: true do |t|
     t.string   "name"

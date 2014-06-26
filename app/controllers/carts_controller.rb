@@ -1,7 +1,8 @@
 class CartsController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_user, only: [:index]
   before_action :initialize_cart
-  before_action :find_user
+  before_action :not_user_cart, only: [:index]
   
   
 
@@ -15,8 +16,8 @@ class CartsController < ApplicationController
 
     if request.post?
       @item = @cart.add_listing(params[:id])
-      # flash[:cart_notice] = "Added <em>#{@item.listing.name}"
-      flash[:notice] = "Item added."
+      flash[:notice] = "Added #{@listing.name} to cart."
+      # flash[:notice] = "Item added."
       redirect_to controller: "listings", action: "show"
     else
       render
@@ -30,19 +31,31 @@ class CartsController < ApplicationController
 
     def find_user
       @user = User.find(params[:id])
-      if current_user.id != @cart.user_id
-        redirect_to root_url
-      end
     end
 
     def initialize_cart
       if session[:cart_id]
         @cart = Cart.find(session[:cart_id])
       else
-        @cart = Cart.create
-        @cart.user_id = current_user
+        # @cart = Cart.create
+        @cart = Cart.new
+        # @cart.user_id ||= current_user.id
+        @cart.user_id = current_user.id
+        @cart.save
         session[:cart_id] = @cart.id
       end
     end
 
+    def not_user_cart
+      if current_user.id != @cart.user_id
+        redirect_to root_url
+      end
+    end
+    # def user_cart
+    #   @cart.user_id ||= current_user.id
+    # end
+
+    def total(cart_items)
+      # cart_items.each do |item|
+    end
 end

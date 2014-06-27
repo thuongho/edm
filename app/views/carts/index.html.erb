@@ -27,8 +27,20 @@
     </tr>
 </table>
 
-<div class="righty">
-  <%= link_to "Continue Shopping", root_url %> | <%= link_to "Empty Cart", "#" %> <br><br>
-  <%= link_to "Checkout", @cart.paypal_url(root_url), class: 'btn btn-warning' %> <br><br>
-  
+<div class="row">
+    <div class="col-lg-1 pull-right righty" id="clear-cart">
+      <%= form_tag("/carts/clear", class: "no-form") do %>
+      <%= submit_tag("Empty Cart", class: 'button-link') %>
+  <% end %> 
+    </div>
+    <div class="col-lg-2 pull-right righty">
+     <%= link_to "Continue Shopping", root_url %> 
+     <!-- %= button_to "Empty Cart", {action: "clear"}, class: 'button-link' %> -->
+  </div>
+  <br><br>
+</div>
+<div class="row">
+  <div class="col-lg-2 pull-right righty checkout">
+    <%= link_to "Checkout", @cart.paypal_url(root_url), class: 'btn btn-warning' %> <br><br>
+  </div>
 </div>

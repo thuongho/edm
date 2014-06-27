@@ -123,3 +123,30 @@ footer {
 .disclaimer {
   margin-bottom: 3em;
 }
+
+// make a button look like a link
+.button-link {
+  background: none!important;
+  border: none;
+  padding:0!important;
+  color:#069;
+  &:hover {
+    text-decoration:underline;
+  }
+}
+
+// mod clear cart
+// adjust form-tag width
+.no-form {
+  width: 5%;
+  text-align: right;
+}
+#clear-cart {
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+.checkout {
+  padding-right: 10px;
+  padding-left: 20px;
+}

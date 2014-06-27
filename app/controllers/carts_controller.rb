@@ -17,15 +17,21 @@ class CartsController < ApplicationController
     if request.post?
       @item = @cart.add_listing(params[:id])
       flash[:notice] = "Added #{@listing.name} to cart."
-      # flash[:notice] = "Item added."
       redirect_to controller: "listings", action: "show"
     else
       render
     end
   end
 
-  # def add
-  # end
+  def clear
+    if request.post?
+      @cart.line_items.destroy_all
+      flash[:notice] = "Your cart is empty."
+      redirect_to root_url
+    else
+      render
+    end
+  end
 
   private
 
@@ -51,11 +57,5 @@ class CartsController < ApplicationController
         redirect_to root_url
       end
     end
-    # def user_cart
-    #   @cart.user_id ||= current_user.id
-    # end
 
-    def total(cart_items)
-      # cart_items.each do |item|
-    end
 end

@@ -38,7 +38,9 @@ class Cart < ActiveRecord::Base
   end
 
   def total
-    line_items.inject(0) {|sum, n| n.price * n.quantity + sum}
+    if line_items.length > 0
+      line_items.inject(0) {|sum, n| n.price * n.quantity + sum}
+    end
   end
 
   def paypal_url(return_url)

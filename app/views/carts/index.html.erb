@@ -41,6 +41,6 @@
 </div>
 <div class="row">
   <div class="col-lg-2 pull-right righty checkout">
-    <%= link_to "Checkout", @cart.paypal_url(root_url), class: 'btn btn-warning' %> <br><br>
+    <%= link_to "Checkout", @cart.paypal_url(root_url, payment_notifications_url), class: 'btn btn-warning' %> <br><br>
   </div>
 </div>

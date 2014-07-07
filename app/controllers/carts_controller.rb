@@ -41,15 +41,17 @@ class CartsController < ApplicationController
 
     def initialize_cart
       if session[:cart_id]
-        @cart = Cart.find(session[:cart_id])
-      else
-        # @cart = Cart.create
-        @cart = Cart.new
-        # @cart.user_id ||= current_user.id
-        @cart.user_id = current_user.id
-        @cart.save
+        @cart ||= Cart.find(session[:cart_id])
+        session[:cart_id] = nil if @cart.purchased_at
+      end
+      if session[:cart_id].nil?
+        @cart = Cart.create!(user_id: current_user.id)
+        # @cart = Cart.new
+        # @cart.user_id = current_user.id
+        # @cart.save
         session[:cart_id] = @cart.id
       end
+      @cart
     end
 
     def not_user_cart

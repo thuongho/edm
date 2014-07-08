@@ -2,26 +2,9 @@ class Cart < ActiveRecord::Base
 
   has_many :line_items
   has_many :listings, through: :line_items
+  has_one :order
 
   scope :recent, lambda { order("created_at DESC")}
-
-  # after_save :add_user_id
-
-  # attr_reader :items
-  # attr_reader :total_price
-
-  # :items
-  # :total_price
-
-  # def initialize
-  #   @items = []
-  #   @total_price = 0.0
-  # end
-
-  # def add_listing(listing)
-  #   @items << Item.new_based_on(listing)
-  #   @total_price += listing.price
-  # end
 
   def add_listing(listing_id)
     items = line_items.where(listing_id: listing_id)
@@ -37,11 +20,21 @@ class Cart < ActiveRecord::Base
     end
   end
 
+  # obsolete
   def total
     if line_items.length > 0
       line_items.inject(0) {|sum, n| n.price * n.quantity + sum}
     end
   end
+
+  def total_price
+    # convert to array so it doesn't try to do sum on database directly
+    line_items.to_a.sum(&:full_price)
+  end
+
+  # def in_cents(cost)
+  #   cost * 100
+  # end
 
   def paypal_url(return_url, notify_url)
     values = {
@@ -54,10 +47,10 @@ class Cart < ActiveRecord::Base
     }
     line_items.each_with_index do |item, index|
       values.merge!({
-        "amount_#{index+1}" => item.price,
+        "amount_#{index+1}" => item.price.to_i * 100,
         "item_name_#{index+1}" => item.listing.name,
         "item_number_#{index+1}" => item.id,
-        "quantity_#{index+1}" => item.quantity
+        "quantity_#{index+1}" => item.quantity.to_i
       })
   end
   "https://www.sandbox.paypal.com/cgi-bin/webscr?" + values.to_query

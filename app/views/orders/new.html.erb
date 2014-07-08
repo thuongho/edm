@@ -1,5 +1,16 @@
 <h1>New order</h1>
 
-<%= render 'form' %>
+<!-- %= render 'form' %> -->
+<%= form_for @order do |f| %>
 
-<%= link_to 'Back', listing_orders_path %>
+  <%= f.hidden_field :express_token %>
+  <p>Are you sure you want to purchase this order?</p>
+
+  <%= :express_token %>
+
+  <p><%= f.submit "Complete Order" %></p>
+<% end %>
+
+<%= @order.express_token %>
+
+<!-- %= link_to 'Back', listing_orders_path %> -->

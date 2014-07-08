@@ -4,8 +4,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :listings do
-    resources :orders, only: [:new, :create]
+    # resources :orders, only: [:new, :create]
   end
+  resources :orders, only: [:new, :create],
+            :new => { :express => :get }
 
   get 'pages/about'
 
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
   match '/sales', to: 'orders#sales', via: 'get'
   match '/purchases', to: 'orders#purchases', via: 'get'
   match '/cart', to: 'carts#index', via: 'get'
+  match '/express_checkout', to: 'orders#express', via: 'get'
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
 

@@ -36,4 +36,11 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # paypal
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    ::EXPRESS_GATEWAY = ActiveMerchant::Billing::BogusGateway.new
+  end
+
 end

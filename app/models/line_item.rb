@@ -10,4 +10,8 @@ class LineItem < ActiveRecord::Base
   #   line_item.price = listing.price
   #   return line_item
   # end
+
+  def full_price
+    price * quantity
+  end
 end

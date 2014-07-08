@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140627074956) do
+ActiveRecord::Schema.define(version: 20140707090145) do
 
   create_table "carts", force: true do |t|
     t.integer  "user_id"
+    t.datetime "purchased_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "purchased_at"
   end
 
   create_table "line_items", force: true do |t|
@@ -42,15 +42,27 @@ ActiveRecord::Schema.define(version: 20140627074956) do
     t.integer  "user_id"
   end
 
+  create_table "order_transactions", force: true do |t|
+    t.integer  "order_id"
+    t.string   "action"
+    t.integer  "amount"
+    t.boolean  "success"
+    t.string   "authorization"
+    t.string   "message"
+    t.text     "params"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orders", force: true do |t|
-    t.string   "address"
-    t.string   "city"
-    t.string   "state"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "listing_id"
     t.integer  "buyer_id"
-    t.integer  "seller_id"
+    t.integer  "cart_id"
+    t.integer  "ip"
+    t.string   "express_token"
+    t.string   "express_payer_id"
   end
 
   create_table "payment_notifications", force: true do |t|

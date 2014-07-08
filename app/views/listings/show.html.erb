@@ -1,4 +1,4 @@
-<div class="row">
+<!-- div class="row"> -->
   <div class="col-md-6">
     <div class="thumbnail">
       <%= image_tag @listing.image.url %>
@@ -14,7 +14,7 @@
       <!-- %= link_to "Add To Cart", action: "add_to_cart", id: params[:id] %> -->
       <!-- %= link_to "Add To Cart", controller: "cart", action: "add", id: params[:id] %> -->
       <%= button_to "Add To Cart", {controller: "carts", action: "add", id: @listing}, class: 'btn btn-info' %> <br>
-      <%= link_to "Buy It Now", new_listing_order_path(@listing), class: 'btn btn-primary' %>
+      <!-- %= link_to "Buy It Now", new_listing_order_path(@listing), class: 'btn btn-primary' %> -->
     </div>
     <% end %>
   </div>

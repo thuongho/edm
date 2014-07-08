@@ -11,6 +11,7 @@
     <th class="center">Date Purchase</th>
   </tr>
 
+  <% if !@orders.nil? %>
   <% @orders.each do |order| %>
 
     <tr>
@@ -20,6 +21,7 @@
       <td class="center"><%= order.seller.name %></td>
       <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
     </tr>
+  <% end %>
   <% end %>
 </table>
 

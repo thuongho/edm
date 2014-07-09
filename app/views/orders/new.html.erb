@@ -3,10 +3,11 @@
 <!-- %= render 'form' %> -->
 <%= form_for @order do |f| %>
 
+
   <%= f.hidden_field :express_token %>
   <p>Are you sure you want to purchase this order?</p>
 
-  <%= :express_token %>
+
 
   <p><%= f.submit "Complete Order" %></p>
 <% end %>

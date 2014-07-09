@@ -85,13 +85,13 @@ Rails.application.configure do
   # config.action_mailer.default_url_options = { host: 'localhost:3000' }
 
   #Paypal
-  config.after_initialize do
-    ActiveMerchant::Billing::Base.mode = :production
-    paypal_options = {
-      login: "thuong.t.ho-developer_api1.gmail.com",
-      password: "1400888243",
-      signature: "An5ns1Kso7MWUdW4ErQKJJJ4qi4-AHR.Hn8MMY2A1xvYOKvMOLnhfVge"
-    }
-    ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
-  end
-end
+#   config.after_initialize do
+#     ActiveMerchant::Billing::Base.mode = :production
+#     paypal_options = {
+#       login: "thuong.t.ho-facilitator_api1.gmail.com",
+#       password: "1403068326",
+#       signature: "An5ns1Kso7MWUdW4ErQKJJJ4qi4-AnZHQPsP0SGApkC46O7N-EAIKxJE"
+#     }
+#     ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+#   end
+# end

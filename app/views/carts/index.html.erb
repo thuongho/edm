@@ -43,7 +43,7 @@
   <div class="col-lg-2 pull-right righty checkout">
     <%= link_to "Paypal Checkout", @cart.paypal_url(root_url, payment_notifications_url), class: 'btn btn-warning' %>
     <%= link_to "Express Checkout", express_checkout_path, class: 'btn btn-warning' %>
-    <%= link_to "Checkout", new_order_path, class: 'btn btn-warning' %>
+    <!-- %= link_to "Checkout", new_order_path, class: 'btn btn-warning' %> -->
     <br><br>
     Stats for me: <%= !@current_cart.total.nil? ? (@current_cart.total_price * 100).round : "0" %>
 

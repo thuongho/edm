@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
 
     response = EXPRESS_GATEWAY.setup_purchase(current_cart.build_order.price_in_cents, 
       ip: request.remote_ip,
-      return_url: root_url,
+      return_url: new_order_url,
       cancel_return_url: root_url,
       currency: "USD",
       allow_guest_checkout: true,
@@ -39,16 +39,18 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     # @order = Order.new(order_params)
+    # @order = @current_cart.build_order(params[:order])
 
     # Using activemerchant
-    @order = current_user.cart.build_order(order_params)
+    @order = @current_cart.build_order(order_params)
     @order.ip = request.remote_ip
     # @seller = @listing.user
 
     # @order.listing_id = @listing.id
-    @order.buyer_id = current_user.id
+    # @order.buyer_id = current_user.id
     # @order.seller_id = @seller.id
-    @order.cart_id = @current_cart.id
+    # @order.cart_id = current_user.cart.id
+    # @order = Order.make_order(params[:token], current_user, current_cart, request.remote_ip)
 
     # respond_to do |format|
       if @order.save

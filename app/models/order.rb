@@ -11,6 +11,17 @@ class Order < ActiveRecord::Base
 
   # validates :address, :city, :state, presence: true
 
+  # def self.make_order(token, user, cart, ip_address)
+  #   order = self.new
+  #   order.express_token = token
+  #   order.ip = ip_address
+  #   order.buyer_id = user.id
+  #   order.cart_id = cart.id
+  #   order.save!
+  #   order.purchase
+  #   return order
+  # end
+
   def purchase
     response = EXPRESS_GATEWAY.purchase(price_in_cents, express_purchase_options)
     transactions.create!(action: "purchase", amount: price_in_cents, response: response)
@@ -36,9 +47,9 @@ class Order < ActiveRecord::Base
 
     def express_purchase_options
       {
-        :ip => ip,
-        :token => express_token,
-        :payer_id => express_payer_id
+        ip: ip,
+        token: express_token,
+        payer_id: express_payer_id
       }
     end
 end

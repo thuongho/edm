@@ -67779,3 +67779,851 @@ Started GET "/assets/payment_notifications.js?body=1" for 127.0.0.1 at 2014-07-0
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-09 00:13:42 -0700
+  [1m[36mOrderTransaction Load (0.1ms)[0m  [1mSELECT  "order_transactions".* FROM "order_transactions"   ORDER BY "order_transactions"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-09 00:44:51 -0700
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.4ms)[0m  SELECT "listings".* FROM "listings"   ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (18.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 30.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-09 00:44:53 -0700
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings"   ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-14 18:35:40 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.4ms)[0m  SELECT "listings".* FROM "listings"   ORDER BY created_at DESC
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (69.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 339ms (Views: 311.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/payment_notifications.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:41 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings"   ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/payment_notifications.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-14 18:35:46 -0700
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-07-14 18:35:48 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-07-14 18:35:53 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"olIYzPKZj/g6mP3mlUZVge28W4AJpTwgu5YooURoSX8=", "user"=>{"email"=>"test@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'test@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", "2014-07-15 01:35:53.587390"], ["last_sign_in_at", "2014-07-09 05:21:44.054011"], ["sign_in_count", 22], ["updated_at", "2014-07-15 01:35:53.588394"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 90ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-14 18:35:53 -0700
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings"   ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/listings/4" for 127.0.0.1 at 2014-07-14 18:36:18 -0700
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered listings/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/carts/add/4" for 127.0.0.1 at 2014-07-14 18:36:20 -0700
+Processing by CartsController#add as HTML
+  Parameters: {"authenticity_token"=>"SGOy3AYWD4oEES5hQjZFoRgkJe5tKpB7kx+vd1zDv1A=", "id"=>"4"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "carts" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)  [["created_at", "2014-07-15 01:36:20.209326"], ["updated_at", "2014-07-15 01:36:20.209326"], ["user_id", 1]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "line_items"  WHERE "line_items"."cart_id" = ? AND "line_items"."listing_id" = 4  [["cart_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "line_items" ("cart_id", "created_at", "listing_id", "price", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["cart_id", 13], ["created_at", "2014-07-15 01:36:20.229798"], ["listing_id", 4], ["price", 1.0], ["quantity", 1], ["updated_at", "2014-07-15 01:36:20.229798"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/listings/4
+Completed 302 Found in 66ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/listings/4" for 127.0.0.1 at 2014-07-14 18:36:20 -0700
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered listings/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/carts/add/4" for 127.0.0.1 at 2014-07-14 18:36:22 -0700
+Processing by CartsController#add as HTML
+  Parameters: {"authenticity_token"=>"SGOy3AYWD4oEES5hQjZFoRgkJe5tKpB7kx+vd1zDv1A=", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "line_items"  WHERE "line_items"."cart_id" = ? AND "line_items"."listing_id" = 4[0m  [["cart_id", 13]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT  "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ? AND "line_items"."listing_id" = 4  ORDER BY "line_items"."id" ASC LIMIT 1  [["cart_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "line_items" SET "quantity" = ?, "updated_at" = ? WHERE "line_items"."id" = 19  [["quantity", 2], ["updated_at", "2014-07-15 01:36:22.583562"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/listings/4
+Completed 302 Found in 17ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/listings/4" for 127.0.0.1 at 2014-07-14 18:36:22 -0700
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered listings/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-14 18:36:23 -0700
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings"   ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-07-14 18:36:25 -0700
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered listings/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/carts/add/2" for 127.0.0.1 at 2014-07-14 18:36:26 -0700
+Processing by CartsController#add as HTML
+  Parameters: {"authenticity_token"=>"SGOy3AYWD4oEES5hQjZFoRgkJe5tKpB7kx+vd1zDv1A=", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "line_items"  WHERE "line_items"."cart_id" = ? AND "line_items"."listing_id" = 2[0m  [["cart_id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "line_items" ("cart_id", "created_at", "listing_id", "price", "quantity", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 13], ["created_at", "2014-07-15 01:36:26.570845"], ["listing_id", 2], ["price", 5.0], ["quantity", 1], ["updated_at", "2014-07-15 01:36:26.570845"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/listings/2
+Completed 302 Found in 23ms (ActiveRecord: 10.5ms)
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-07-14 18:36:26 -0700
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered listings/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cart?id=1" for 127.0.0.1 at 2014-07-14 18:36:28 -0700
+Processing by CartsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."user_id" = 1  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = 13
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mListing Load (0.2ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?  [["cart_id", 13]]
+  Rendered carts/index.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 54.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/express_checkout" for 127.0.0.1 at 2014-07-14 18:36:35 -0700
+Processing by OrdersController#express as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.2ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  [1m[35mListing Load (0.4ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOrder Load (0.4ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1  [["cart_id", 13]]
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-6BD34386SW520974Y
+Completed 403 Forbidden in 971ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/express_checkout" for 127.0.0.1 at 2014-07-14 18:36:36 -0700
+Processing by OrdersController#express as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1  [["cart_id", 13]]
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-47X48518RX0421816
+Completed 302 Found in 759ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/?token=EC-47X48518RX0421816" for 127.0.0.1 at 2014-07-14 18:39:33 -0700
+Processing by ListingsController#index as HTML
+  Parameters: {"token"=>"EC-47X48518RX0421816"}
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings"   ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-07-14 18:39:42 -0700
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered listings/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/carts/add/2" for 127.0.0.1 at 2014-07-14 18:39:43 -0700
+Processing by CartsController#add as HTML
+  Parameters: {"authenticity_token"=>"SGOy3AYWD4oEES5hQjZFoRgkJe5tKpB7kx+vd1zDv1A=", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.6ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mListing Load (0.3ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "line_items"  WHERE "line_items"."cart_id" = ? AND "line_items"."listing_id" = 2[0m  [["cart_id", 13]]
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT  "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ? AND "line_items"."listing_id" = 2  ORDER BY "line_items"."id" ASC LIMIT 1  [["cart_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "line_items" SET "quantity" = ?, "updated_at" = ? WHERE "line_items"."id" = 20  [["quantity", 2], ["updated_at", "2014-07-15 01:39:43.835228"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/listings/2
+Completed 302 Found in 30ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/listings/2" for 127.0.0.1 at 2014-07-14 18:39:43 -0700
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered listings/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cart?id=1" for 127.0.0.1 at 2014-07-14 18:39:46 -0700
+Processing by CartsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCart Load (0.4ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."user_id" = 1  ORDER BY created_at DESC LIMIT 1
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = 13[0m
+  [1m[35mListing Load (0.7ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?  [["cart_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  Rendered carts/index.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 49.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/express_checkout" for 127.0.0.1 at 2014-07-14 18:39:51 -0700
+Processing by OrdersController#express as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?  [["cart_id", 13]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1[0m  [["cart_id", 13]]
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-66Y77570RN370740S
+Completed 403 Forbidden in 1119ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/express_checkout" for 127.0.0.1 at 2014-07-14 18:39:52 -0700
+Processing by OrdersController#express as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?  [["cart_id", 13]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1[0m  [["cart_id", 13]]
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-1BH995079U239413P
+Completed 302 Found in 732ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/orders/new?token=EC-1BH995079U239413P&PayerID=8LRHFB8R3QWC4" for 127.0.0.1 at 2014-07-14 18:40:36 -0700
+Processing by OrdersController#new as HTML
+  Parameters: {"token"=>"EC-1BH995079U239413P", "PayerID"=>"8LRHFB8R3QWC4", "new"=>{"express"=>:get}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered orders/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 724ms (Views: 31.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-07-14 18:40:52 -0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SGOy3AYWD4oEES5hQjZFoRgkJe5tKpB7kx+vd1zDv1A=", "order"=>{"express_token"=>"EC-1BH995079U239413P"}, "commit"=>"Complete Order", "new"=>{"express"=>:get}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+Unpermitted parameters: express_token
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1  [["cart_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "orders" ("cart_id", "created_at", "ip", "updated_at") VALUES (?, ?, ?, ?)  [["cart_id", 13], ["created_at", "2014-07-15 01:40:52.213245"], ["ip", 127], ["updated_at", "2014-07-15 01:40:52.213245"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mLineItem Load (0.3ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?  [["cart_id", 13]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "order_transactions" ("action", "amount", "created_at", "message", "order_id", "params", "success", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["action", "purchase"], ["amount", 1200], ["created_at", "2014-07-15 01:40:53.155561"], ["message", "Invalid token."], ["order_id", 19], ["params", "---\ntimestamp: '2014-07-15T01:40:53Z'\nack: Failure\ncorrelation_id: 921d17cd6dc2e\nversion: '72'\nbuild: '11843215'\ndo_express_checkout_payment_response_details: \nmessage: Invalid token.\nerror_codes: '10410'\nTimestamp: '2014-07-15T01:40:53Z'\nAck: Failure\nCorrelationID: 921d17cd6dc2e\nErrors:\n  ShortMessage: Invalid token\n  LongMessage: Invalid token.\n  ErrorCode: '10410'\n  SeverityCode: Error\nVersion: '72'\nBuild: '11843215'\nDoExpressCheckoutPaymentResponseDetails: \n"], ["success", "f"], ["updated_at", "2014-07-15 01:40:53.155561"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 953ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-14 18:40:53 -0700
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings"   ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+  [1m[36mOrderTransaction Load (0.2ms)[0m  [1mSELECT  "order_transactions".* FROM "order_transactions"   ORDER BY "order_transactions"."id" DESC LIMIT 1[0m
+
+
+Started GET "/cart?id=1" for 127.0.0.1 at 2014-07-14 18:45:36 -0700
+Processing by CartsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mCart Load (1.0ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."user_id" = 1  ORDER BY created_at DESC LIMIT 1
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = 13[0m
+  [1m[35mListing Load (0.6ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?  [["cart_id", 13]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  Rendered carts/index.html.erb within layouts/application (14.8ms)
+  Rendered layouts/_shim.html.erb (0.1ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 54ms (Views: 40.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/express_checkout" for 127.0.0.1 at 2014-07-14 18:45:40 -0700
+Processing by OrdersController#express as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?  [["cart_id", 13]]
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1[0m  [["cart_id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "orders" SET "cart_id" = ?, "updated_at" = ? WHERE "orders"."id" = 19[0m  [["cart_id", nil], ["updated_at", "2014-07-15 01:45:40.701083"]]
+  [1m[35m (8.1ms)[0m  commit transaction
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5JP161018N7130135
+Completed 403 Forbidden in 698ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/express_checkout" for 127.0.0.1 at 2014-07-14 18:45:41 -0700
+Processing by OrdersController#express as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  [1m[35mListing Load (0.1ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mListing Load (0.1ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1  [["cart_id", 13]]
+Redirected to https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-5H6716315G808183V
+Completed 302 Found in 746ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/orders/new?token=EC-5H6716315G808183V&PayerID=8LRHFB8R3QWC4" for 127.0.0.1 at 2014-07-14 18:46:54 -0700
+Processing by OrdersController#new as HTML
+  Parameters: {"token"=>"EC-5H6716315G808183V", "PayerID"=>"8LRHFB8R3QWC4", "new"=>{"express"=>:get}}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered orders/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 1110ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-07-14 18:50:11 -0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SGOy3AYWD4oEES5hQjZFoRgkJe5tKpB7kx+vd1zDv1A=", "order"=>{"express_token"=>"EC-5H6716315G808183V"}, "commit"=>"Complete Order", "new"=>{"express"=>:get}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 13]]
+Unpermitted parameters: express_token
+  [1m[36mOrder Load (0.1ms)[0m  [1mSELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1[0m  [["cart_id", 13]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "orders" ("cart_id", "created_at", "ip", "updated_at") VALUES (?, ?, ?, ?)[0m  [["cart_id", 13], ["created_at", "2014-07-15 01:50:11.405443"], ["ip", 127], ["updated_at", "2014-07-15 01:50:11.405443"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "order_transactions" ("action", "amount", "created_at", "message", "order_id", "params", "success", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "purchase"], ["amount", 1200], ["created_at", "2014-07-15 01:50:12.574649"], ["message", "Invalid token."], ["order_id", 20], ["params", "---\ntimestamp: '2014-07-15T01:50:13Z'\nack: Failure\ncorrelation_id: fc9815402ee9a\nversion: '72'\nbuild: '11843215'\ndo_express_checkout_payment_response_details: \nmessage: Invalid token.\nerror_codes: '10410'\nTimestamp: '2014-07-15T01:50:13Z'\nAck: Failure\nCorrelationID: fc9815402ee9a\nErrors:\n  ShortMessage: Invalid token\n  LongMessage: Invalid token.\n  ErrorCode: '10410'\n  SeverityCode: Error\nVersion: '72'\nBuild: '11843215'\nDoExpressCheckoutPaymentResponseDetails: \n"], ["success", "f"], ["updated_at", "2014-07-15 01:50:12.574649"]]
+  [1m[35m (8.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 1185ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-14 18:50:12 -0700
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings"   ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-07-14 18:53:08 -0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SGOy3AYWD4oEES5hQjZFoRgkJe5tKpB7kx+vd1zDv1A=", "order"=>{"express_token"=>"EC-5H6716315G808183V"}, "commit"=>"Complete Order", "new"=>{"express"=>:get}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+Unpermitted parameters: express_token
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1  [["cart_id", 13]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "orders" SET "cart_id" = ?, "updated_at" = ? WHERE "orders"."id" = 20  [["cart_id", nil], ["updated_at", "2014-07-15 01:53:08.345253"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "orders" ("cart_id", "created_at", "ip", "updated_at") VALUES (?, ?, ?, ?)[0m  [["cart_id", 13], ["created_at", "2014-07-15 01:53:08.356512"], ["ip", 127], ["updated_at", "2014-07-15 01:53:08.356512"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "order_transactions" ("action", "amount", "created_at", "message", "order_id", "params", "success", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "purchase"], ["amount", 1200], ["created_at", "2014-07-15 01:53:10.272800"], ["message", "Invalid token."], ["order_id", 21], ["params", "---\ntimestamp: '2014-07-15T01:53:11Z'\nack: Failure\ncorrelation_id: caacf917d9245\nversion: '72'\nbuild: '11843215'\ndo_express_checkout_payment_response_details: \nmessage: Invalid token.\nerror_codes: '10410'\nTimestamp: '2014-07-15T01:53:11Z'\nAck: Failure\nCorrelationID: caacf917d9245\nErrors:\n  ShortMessage: Invalid token\n  LongMessage: Invalid token.\n  ErrorCode: '10410'\n  SeverityCode: Error\nVersion: '72'\nBuild: '11843215'\nDoExpressCheckoutPaymentResponseDetails: \n"], ["success", "f"], ["updated_at", "2014-07-15 01:53:10.272800"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 1964ms (ActiveRecord: 22.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-14 18:53:10 -0700
+Processing by ListingsController#index as HTML
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings"   ORDER BY created_at DESC[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 28.5ms | ActiveRecord: 0.9ms)
+  [1m[35mOrder Load (0.1ms)[0m  SELECT  "orders".* FROM "orders"   ORDER BY "orders"."id" DESC LIMIT 1
+
+
+Started POST "/orders" for 127.0.0.1 at 2014-07-14 18:54:58 -0700
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SGOy3AYWD4oEES5hQjZFoRgkJe5tKpB7kx+vd1zDv1A=", "order"=>{"express_token"=>"EC-5H6716315G808183V"}, "commit"=>"Complete Order", "new"=>{"express"=>:get}}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mOrder Load (0.2ms)[0m  SELECT  "orders".* FROM "orders"  WHERE "orders"."cart_id" = ? LIMIT 1  [["cart_id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "orders" SET "cart_id" = ?, "updated_at" = ? WHERE "orders"."id" = 21  [["cart_id", nil], ["updated_at", "2014-07-15 01:54:59.755770"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "orders" ("cart_id", "created_at", "express_payer_id", "express_token", "ip", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["cart_id", 13], ["created_at", "2014-07-15 01:54:59.766437"], ["express_payer_id", "8LRHFB8R3QWC4"], ["express_token", "EC-5H6716315G808183V"], ["ip", 127], ["updated_at", "2014-07-15 01:54:59.766437"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 13]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "order_transactions" ("action", "amount", "authorization", "created_at", "message", "order_id", "params", "success", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["action", "purchase"], ["amount", 1200], ["authorization", "23701559G10567323"], ["created_at", "2014-07-15 01:55:03.012515"], ["message", "Success"], ["order_id", 22], ["params", "---\ntimestamp: '2014-07-15T01:55:03Z'\nack: Success\ncorrelation_id: 39e983ef5cc5\nversion: '72'\nbuild: '11843215'\ntoken: EC-5H6716315G808183V\ntransaction_id: 23701559G10567323\nparent_transaction_id: \nreceipt_id: \ntransaction_type: express-checkout\npayment_type: instant\npayment_date: '2014-07-15T01:55:02Z'\ngross_amount: '12.00'\ngross_amount_currency_id: USD\nfee_amount: '0.65'\nfee_amount_currency_id: USD\ntax_amount: '0.00'\ntax_amount_currency_id: USD\nexchange_rate: \npayment_status: Pending\npending_reason: payment-review\nreason_code: none\nprotection_eligibility: Ineligible\nprotection_eligibility_type: None\nsecure_merchant_account_id: 3XDMQ4BXB59HA\nsuccess_page_redirect_requested: 'false'\nToken: EC-5H6716315G808183V\nPaymentInfo:\n  TransactionID: 23701559G10567323\n  ParentTransactionID: \n  ReceiptID: \n  TransactionType: express-checkout\n  PaymentType: instant\n  PaymentDate: '2014-07-15T01:55:02Z'\n  GrossAmount: '12.00'\n  FeeAmount: '0.65'\n  TaxAmount: '0.00'\n  ExchangeRate: \n  PaymentStatus: Pending\n  PendingReason: payment-review\n  ReasonCode: none\n  ProtectionEligibility: Ineligible\n  ProtectionEligibilityType: None\n  SellerDetails:\n    SecureMerchantAccountID: 3XDMQ4BXB59HA\nSuccessPageRedirectRequested: 'false'\n"], ["success", "t"], ["updated_at", "2014-07-15 01:55:03.012515"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "carts" SET "purchased_at" = ?, "updated_at" = ? WHERE "carts"."id" = 13  [["purchased_at", "2014-07-15 01:55:03.026490"], ["updated_at", "2014-07-15 01:55:03.027209"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4623ms (ActiveRecord: 23.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-14 18:55:03 -0700
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings"   ORDER BY created_at DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 26.8ms | ActiveRecord: 0.8ms)
+  [1m[36mOrder Load (0.2ms)[0m  [1mSELECT  "orders".* FROM "orders"   ORDER BY "orders"."id" DESC LIMIT 1[0m
+
+
+Started GET "/cart?id=1" for 127.0.0.1 at 2014-07-14 18:55:36 -0700
+Processing by CartsController#index as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCart Load (0.2ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "carts" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)[0m  [["created_at", "2014-07-15 01:55:36.333969"], ["updated_at", "2014-07-15 01:55:36.333969"], ["user_id", 1]]
+  [1m[35m (9.5ms)[0m  commit transaction
+  [1m[36mCart Load (0.6ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."user_id" = 1  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mLineItem Load (0.1ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = 14
+  [1m[36mLineItem Load (0.1ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?[0m  [["cart_id", 14]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = ?  [["cart_id", 14]]
+  Rendered carts/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 19.2ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/purchases" for 127.0.0.1 at 2014-07-14 18:58:26 -0700
+Processing by OrdersController#purchases as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders"  WHERE "orders"."buyer_id" = 1  ORDER BY created_at DESC[0m
+  Rendered orders/purchases.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   <% @orders.each do |order| %>
+    16: 
+    17:     <tr>
+    18:       <td class="center"><%= image_tag order.listing.image.url(:thumb) %></td>
+    19:       <td class="center"><%= order.listing.name %></td>
+    20:       <td class="center"><%= number_to_currency(order.listing.price) %></td>
+    21:       <td class="center"><%= order.seller.name %></td>
+  app/views/orders/purchases.html.erb:18:in `block in _app_views_orders_purchases_html_erb__1041598620023113584_2162736280'
+  app/views/orders/purchases.html.erb:15:in `_app_views_orders_purchases_html_erb__1041598620023113584_2162736280'
+
+
+  Rendered /Users/Sam/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/Sam/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Sam/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/purchases" for 127.0.0.1 at 2014-07-14 18:58:26 -0700
+Processing by OrdersController#purchases as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mCart Load (0.1ms)[0m  [1mSELECT  "carts".* FROM "carts"  WHERE "carts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders"  WHERE "orders"."buyer_id" = 1  ORDER BY created_at DESC
+  Rendered orders/purchases.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `image' for nil:NilClass):
+    15:   <% @orders.each do |order| %>
+    16: 
+    17:     <tr>
+    18:       <td class="center"><%= image_tag order.listing.image.url(:thumb) %></td>
+    19:       <td class="center"><%= order.listing.name %></td>
+    20:       <td class="center"><%= number_to_currency(order.listing.price) %></td>
+    21:       <td class="center"><%= order.seller.name %></td>
+  app/views/orders/purchases.html.erb:18:in `block in _app_views_orders_purchases_html_erb__1041598620023113584_2197867280'
+  app/views/orders/purchases.html.erb:15:in `_app_views_orders_purchases_html_erb__1041598620023113584_2197867280'
+
+
+  Rendered /Users/Sam/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Sam/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/Sam/.rvm/gems/ruby-2.1.1@global/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.4ms)

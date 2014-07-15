@@ -80,7 +80,7 @@ class OrdersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
       # params.require(:order).permit(:address, :city, :state)
-      params.require(:order).permit(:order)
+      params.require(:order).permit(:order, :express_token)
     end
 
     def find_listing

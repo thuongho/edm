@@ -47,7 +47,7 @@ class OrdersController < ApplicationController
     # @seller = @listing.user
 
     # @order.listing_id = @listing.id
-    # @order.buyer_id = current_user.id
+    @order.buyer_id = current_user.id
     # @order.seller_id = @seller.id
     # @order.cart_id = current_user.cart.id
     # @order = Order.make_order(params[:token], current_user, current_cart, request.remote_ip)

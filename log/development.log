@@ -69586,3 +69586,126 @@ Processing by CartsController#index as HTML
   Rendered layouts/_header.html.erb (0.7ms)
   Rendered layouts/_footer.html.erb (0.3ms)
 Completed 200 OK in 46ms (Views: 35.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 15:15:32 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListingsController#index as HTML
+  [1m[35mListing Load (0.5ms)[0m  SELECT "listings".* FROM "listings"   ORDER BY created_at DESC
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered listings/index.html.erb within layouts/application (74.2ms)
+  Rendered layouts/_shim.html.erb (0.5ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 353ms (Views: 323.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2014-07-28 15:15:32 -0700
+
+
+Started GET "/assets/carts.css?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/listings.css?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/carts.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/listings.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/assets/payment_notifications.js?body=1" for 127.0.0.1 at 2014-07-28 15:15:33 -0700
+
+
+Started GET "/listings/4" for 127.0.0.1 at 2014-07-28 15:23:18 -0700
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mListing Load (0.2ms)[0m  SELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered listings/show.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+  [1m[36mOrder Load (0.6ms)[0m  [1mSELECT  "orders".* FROM "orders"   ORDER BY "orders"."id" DESC LIMIT 1[0m
+  [1m[35mCart Load (0.3ms)[0m  SELECT "carts".* FROM "carts"  WHERE "carts"."cart_id" = 15
+SQLite3::SQLException: no such column: carts.cart_id: SELECT "carts".* FROM "carts"  WHERE "carts"."cart_id" = 15
+  [1m[36mCart Load (7.7ms)[0m  [1mSELECT "carts".* FROM "carts"  WHERE "carts"."id" = 15[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = 15

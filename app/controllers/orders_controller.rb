@@ -22,7 +22,8 @@ class OrdersController < ApplicationController
   end 
 
   def sales
-    @orders = Order.all.where(seller: current_user).recent
+    # @orders = Order.all.where(seller: current_user).recent
+    @orders = LineItem.listing.user.all.where()
   end
 
   def purchases

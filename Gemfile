@@ -39,3 +39,4 @@ end
 
 gem 'devise'
 gem 'activemerchant'
+gem 'newrelic_rpm'

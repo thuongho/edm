@@ -69709,3 +69709,28 @@ Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.3ms)
 SQLite3::SQLException: no such column: carts.cart_id: SELECT "carts".* FROM "carts"  WHERE "carts"."cart_id" = 15
   [1m[36mCart Load (7.7ms)[0m  [1mSELECT "carts".* FROM "carts"  WHERE "carts"."id" = 15[0m
   [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items"  WHERE "line_items"."cart_id" = 15
+  [1m[36mLineItem Load (0.7ms)[0m  [1mSELECT  "line_items".* FROM "line_items"   ORDER BY "line_items"."id" DESC LIMIT 1[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT  "line_items".* FROM "line_items"   ORDER BY "line_items"."id" DESC LIMIT 1
+  [1m[36mListing Load (0.4ms)[0m  [1mSELECT  "listings".* FROM "listings"  WHERE "listings"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mLineItem Load (0.4ms)[0m  SELECT "line_items".* FROM "line_items"
+  [1m[36mLineItem Load (0.2ms)[0m  [1mSELECT "line_items".* FROM "line_items"[0m
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items"
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders"[0m
+  [1m[35mOrder Load (0.3ms)[0m  SELECT "orders".* FROM "orders"
+  [1m[36mLineItem Load (0.4ms)[0m  [1mSELECT "line_items".* FROM "line_items"[0m
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings"  WHERE "listings"."name" = 'Sam'
+  [1m[36mListing Load (0.2ms)[0m  [1mSELECT "listings".* FROM "listings"[0m
+  [1m[35mListing Load (0.2ms)[0m  SELECT "listings".* FROM "listings"
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders"  WHERE "orders"."line_item" = 15[0m
+SQLite3::SQLException: no such column: orders.line_item: SELECT "orders".* FROM "orders"  WHERE "orders"."line_item" = 15
+  [1m[35mLineItem Load (0.2ms)[0m  SELECT "line_items".* FROM "line_items"
+  [1m[36mLineItem Load (0.3ms)[0m  [1mSELECT "line_items".* FROM "line_items"  WHERE "line_items"."user_id" = 1[0m
+SQLite3::SQLException: no such column: line_items.user_id: SELECT "line_items".* FROM "line_items"  WHERE "line_items"."user_id" = 1
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts"  WHERE "carts"."purchased_at" = 't'
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"  WHERE ("carts"."purchased_at" IS NOT NULL)[0m
+SQLite3::SQLException: no such column: carts.purchased_at: SELECT "users".* FROM "users"  WHERE ("carts"."purchased_at" IS NOT NULL)
+  [1m[36mCart Load (2.0ms)[0m  [1mSELECT "carts".* FROM "carts"  WHERE ("carts"."purchased_at" IS NOT NULL)[0m
+  [1m[35mCart Load (0.1ms)[0m  SELECT "carts".* FROM "carts"  WHERE ("carts"."purchased_at" IS NOT NULL)
+  [1m[36mCart Load (0.4ms)[0m  [1mSELECT "carts".* FROM "carts"  WHERE ("carts"."purchased_at" IS NOT NULL)[0m
